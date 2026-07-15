@@ -1,9 +1,24 @@
+import { ScrollSmoother, ScrollTrigger, TextPlugin } from "gsap/all";
+import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(TextPlugin);
 
 const App = () => {
+  //   useGSAP(() => {
+  //     ScrollSmoother.create({
+  //       smooth: 3,
+  //       effects: true,
+  //     });
+  //   });
   return (
     <main>
       <Navbar />
+      <HeroSection />
+      <div className="h-[200dvh]"></div>
     </main>
   );
 };
