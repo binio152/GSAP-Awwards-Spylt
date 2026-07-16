@@ -1,8 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { useResponsive } from "../libs/useResponsive";
 
 const MessageSection = () => {
+  const { isMobile } = useResponsive();
+
   useGSAP(() => {
     const firstMsg = SplitText.create(".first-message", { type: "words" });
     const secondMsg = SplitText.create(".second-message", { type: "words" });
@@ -50,10 +53,11 @@ const MessageSection = () => {
     gsap.from(thirdMsg.lines, {
       scrollTrigger: {
         trigger: ".third-message",
-        start: "top center",
-        end: "bottom 40%",
+        start: isMobile ? "top 45%" : "top 40%",
+        end: isMobile ? "bottom 43%" : "bottom 30%",
         scrub: true,
       },
+
       rotate: -6,
       yPercent: -300,
       stagger: 0.1,
