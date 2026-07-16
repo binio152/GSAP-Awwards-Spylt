@@ -81,7 +81,7 @@ const HeroSection = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
         )}
-        <div className="hero-content">
+        <div className="hero-content scale-80">
           <div className="overflow-hidden">
             <h1 className="hero-title ignore">Freaking Delicious</h1>
           </div>
