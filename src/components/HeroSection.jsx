@@ -49,9 +49,9 @@ const HeroSection = () => {
       },
     });
     heroTl.to(".hero-container", {
-      rotate: 8,
-      scale: 1.1,
-      yPercent: 8,
+      rotate: -2,
+      scale: 1.05,
+      yPercent: 6,
       ease: "power1.inOut",
     });
   });
