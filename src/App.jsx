@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import MessageSection from "./components/MessageSection";
+import FlavorSection from "./components/FlavorSection";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.registerPlugin(TextPlugin);
@@ -19,7 +20,10 @@ const App = () => {
     <main>
       <Navbar />
       <HeroSection />
+
       <MessageSection />
+
+      <FlavorSection />
       <div className="h-[200dvh]"></div>
     </main>
   );
