@@ -49,9 +49,9 @@ const HeroSection = () => {
       },
     });
     heroTl.to(".hero-container", {
-      rotate: -2,
+      rotate: isMobile ? 0 : -2,
       scale: 1.05,
-      yPercent: 6,
+      yPercent: isMobile ? 0 : 6,
       ease: "power1.inOut",
     });
   });
