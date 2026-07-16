@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import MessageSection from "./components/MessageSection";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.registerPlugin(TextPlugin);
@@ -18,6 +19,7 @@ const App = () => {
     <main>
       <Navbar />
       <HeroSection />
+      <MessageSection />
       <div className="h-[200dvh]"></div>
     </main>
   );
