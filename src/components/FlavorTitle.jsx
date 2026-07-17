@@ -1,8 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
+import { useResponsive } from "../libs/useResponsive";
 
 const FlavorTitle = () => {
+  const { isMobile } = useResponsive();
+
   useGSAP(() => {
     const firstText = SplitText.create(".first-text-split", {
       type: "chars",
@@ -16,8 +19,8 @@ const FlavorTitle = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".flavor-title",
-        start: "top center",
-        end: "70% center",
+        start: isMobile ? "top 55%" : "top 65%",
+        end: "66% center",
         scrub: true,
       },
     });
@@ -52,11 +55,11 @@ const FlavorTitle = () => {
       ">-0.3s",
     );
 
-    tl.from(".flavors", { opacity: 0 }, "<");
+    tl.from(".flavors", { opacity: 0 }, "+=0.3s");
   });
 
   return (
-    <div className="flavor-title general-title col-center h-full 2xl:gap-30 xl:gap-20 gap-14 ">
+    <div className="flavor-title general-title col-center h-full 2xl:gap-24 xl:gap-16 gap-12">
       <div className="overflow-hidden lg:py-0 py-3 first-text-split">
         <h1>We have 6</h1>
       </div>

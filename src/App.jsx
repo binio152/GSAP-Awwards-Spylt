@@ -10,21 +10,26 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.registerPlugin(TextPlugin);
 
 const App = () => {
-  //   useGSAP(() => {
-  //     ScrollSmoother.create({
-  //       smooth: 3,
-  //       effects: true,
-  //     });
-  //   });
+  useGSAP(() => {
+    ScrollSmoother.create({
+      smooth: 1.3,
+      effects: true,
+    });
+  });
   return (
     <main>
       <Navbar />
-      <HeroSection />
 
-      <MessageSection />
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <HeroSection />
 
-      <FlavorSection />
-      <div className="h-[200dvh]"></div>
+          <MessageSection />
+
+          <FlavorSection />
+          <div className="h-[200dvh]"></div>
+        </div>
+      </div>
     </main>
   );
 };

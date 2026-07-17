@@ -9,76 +9,52 @@ const FlavorSlider = () => {
   const sliderRef = useRef(null);
 
   useGSAP(() => {
+    const flavorCards = gsap.utils.toArray(".flavor-card", sliderRef.current);
     const scrollWidth =
-      sliderRef.current.scrollWidth - (1 / 3) * window.innerWidth;
-    const flavorCards = gsap.utils.toArray(".flavor-card");
+      sliderRef.current.scrollWidth - (2 / 5) * window.innerWidth;
 
-    if (!isMobile) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".flavor-section",
-          start: "2% top",
-          end: `+=${scrollWidth}px`,
-          scrub: true,
-          pin: true,
-        },
-      });
-      tl.to(
-        ".flavor-section",
-        {
-          x: `-${scrollWidth}px`,
-          ease: "power1.inOut",
-        },
-        "<",
-      );
-
+    if (isMobile) {
       flavorCards.forEach((card) => {
         const elements = card.querySelector(".flavor-elements");
+        const names = card.querySelector(".names");
 
-        gsap.fromTo(
-          elements,
-          {
-            scale: 0.8,
-            rotate: 16,
-            yPercent: -3,
-            transformOrigin: "center center",
-          },
-          {
-            scale: 1,
-            rotate: 0,
-            ease: "none",
+        gsap
+          .timeline({
             scrollTrigger: {
               trigger: card,
-              containerAnimation: tl,
               start: "left 65%",
               end: "right 35%",
               scrub: true,
             },
-          },
-        );
+          })
+          .from(elements, {
+            scale: 0.8,
+            rotate: 16,
+            yPercent: -3,
+            ease: "power3.inOut",
+          })
+          .from(
+            names,
+            { opacity: 0, ease: "power1.inOut", duration: 0.2 },
+            "<",
+          );
       });
     }
 
-    flavorCards.forEach((card) => {
-      const elements = card.querySelector(".flavor-elements");
-      const names = card.querySelector(".names");
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: card,
-          start: "left 65%",
-          end: "right 35%",
-          scrub: true,
-        },
-      });
-      tl.from(elements, {
-        scale: 0.8,
-        rotate: 16,
-        yPercent: -3,
-        ease: "power3.inOut",
-      });
-      tl.from(names, { opacity: 0, ease: "power1.inOut", duration: 0.2 }, "<");
-    });
+    if (!isMobile) {
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: ".flavor-section",
+            start: "2% top",
+            end: `+=${scrollWidth}px`,
+            scrub: true,
+            pin: true,
+          },
+          delay: 0.2,
+        })
+        .to(".flavor-section", { x: () => -scrollWidth, ease: "none" });
+    }
   });
 
   return (
@@ -91,19 +67,25 @@ const FlavorSlider = () => {
           >
             <img
               src={`/images/${flavor.color}-bg.svg`}
-              alt=""
+              loading="eager"
+              decoding="async"
+              alt="drink-background"
               className="absolute bottom-0"
             />
 
             <img
               src={`/images/${flavor.color}-drink.webp`}
-              alt=""
+              loading="eager"
+              decoding="async"
+              alt="drink-image"
               className="drinks"
             />
 
             <img
               src={`/images/${flavor.color}-elements.webp`}
-              alt=""
+              loading="eager"
+              decoding="async"
+              alt="drink-element"
               className="flavor-elements elements"
             />
 
