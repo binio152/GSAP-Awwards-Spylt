@@ -22,7 +22,7 @@ const NutritionSection = () => {
         scrollTrigger: {
           trigger: ".nutrition-section",
           start: isMobile ? "top 60%" : "12% center",
-          end: "68% center",
+          end: isMobile ? "60% center" : "68% center",
           scrub: true,
         },
       })
@@ -101,7 +101,7 @@ const NutritionSection = () => {
         </div>
         <div className="flex md:justify-center items-center translate-y-5 md:translate-y-12">
           <div className="md:max-w-xs max-w-md">
-            <p className="nutrition-description text-lg md:text-right text-balance font-paragraph font-semibold">
+            <p className="nutrition-description text-md md:text-lg  md:text-right text-balance font-paragraph font-semibold">
               Milk contains a wide array of nutrients, including vitamins,
               minerals, and protein, and this is lactose free
             </p>
@@ -113,13 +113,13 @@ const NutritionSection = () => {
             {nutrientLists.map((nutrient, index) => (
               <div key={index} className="relative flex-1 col-center">
                 <div>
-                  <p className="nutrition-label md:text-lg text-md font-paragraph font-semibold tracking-tight">
+                  <p className="nutrition-label md:text-lg text-md font-paragraph font-semibold tracking-tighter">
                     {nutrient.label}
                   </p>
                   <p className="font-paragraph md:text-sm text-xs mt-1 md:mt-2">
                     up to
                   </p>
-                  <p className="nutrition-amount text-xl md:text-4xl tracking-tighter font-bold">
+                  <p className="nutrition-amount text-lg md:text-4xl tracking-tighter font-bold">
                     {nutrient.amount}
                   </p>
                 </div>
