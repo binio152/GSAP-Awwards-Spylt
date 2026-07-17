@@ -38,7 +38,17 @@ const BenefitSection = () => {
         opacity: 1,
         clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
         ease: "circ.out",
-      });
+      })
+      .to(
+        ".benefit-section .more",
+        {
+          duration: 0.15,
+          opacity: 1,
+          clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+          ease: "circ.out",
+        },
+        ">-0.15s",
+      );
   });
 
   return (
@@ -81,7 +91,10 @@ const BenefitSection = () => {
             />
           </div>
 
-          <div className="md:mt-0 mt-10">
+          <div
+            className="md:mt-0 mt-10 more"
+            style={{ clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)" }}
+          >
             <p>And much more ...</p>
           </div>
         </div>
