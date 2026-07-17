@@ -36,7 +36,6 @@ const nutrientLists = [
   { label: "Calcium", amount: "500mg" },
   { label: "Vitamin A", amount: "176mcg" },
   { label: "Vitamin D", amount: "5mcg" },
-  { label: "Iron", amount: "1mg" },
 ];
 
 const cards = [
