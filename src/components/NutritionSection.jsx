@@ -21,8 +21,8 @@ const NutritionSection = () => {
       .timeline({
         scrollTrigger: {
           trigger: ".nutrition-section",
-          start: isMobile ? "top 60%" : "5% center",
-          end: "65% center",
+          start: isMobile ? "top 60%" : "12% center",
+          end: "68% center",
           scrub: true,
         },
       })
@@ -57,7 +57,7 @@ const NutritionSection = () => {
           duration: 1,
           ease: "power1.inOut",
         },
-        ">-0.2s",
+        ">-0.1s",
       )
       .from(
         ".nutrition-label",
@@ -72,7 +72,7 @@ const NutritionSection = () => {
   });
 
   return (
-    <section className="nutrition-section">
+    <section className="nutrition-section ">
       <img
         src="/images/slider-dip.png"
         alt=""
@@ -93,13 +93,13 @@ const NutritionSection = () => {
               }}
               className="nutrition-text-scroll place-self-start scale-80"
             >
-              <div className="bg-yellow-brown pb-5 md:pt-0 pt-3 md:px-5 px-3">
+              <div className="bg-yellow-brown md:pt-0 py-3 md:px-5 px-3">
                 <h2 className="text-milk-yellow ">Body Good</h2>
               </div>
             </div>
           </div>
         </div>
-        <div className="flex md:justify-center items-center translate-y-5 md:-translate-y-5">
+        <div className="flex md:justify-center items-center translate-y-5 md:translate-y-12">
           <div className="md:max-w-xs max-w-md">
             <p className="nutrition-description text-lg md:text-right text-balance font-paragraph font-semibold">
               Milk contains a wide array of nutrients, including vitamins,

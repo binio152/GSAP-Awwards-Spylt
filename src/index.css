@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
       @apply relative z-10 w-full h-full flex flex-col 2xl:justify-center items-center translate-y-10 2xl:pt-0 md:pt-26 pt-22;
 
       .hero-title {
-        @apply text-dark-brown 2xl:text-[6.5rem] md:text-[5rem] text-[3rem] font-bold uppercase md:leading-[6vw] leading-[9vw] tracking-[-.35vw] 2xl:mb-0 mb-3;
+        @apply text-dark-brown 2xl:text-[6.5rem] md:text-[5rem] text-[3.3rem] font-bold uppercase md:leading-[6vw] leading-[9vw] tracking-[-.35vw] 2xl:mb-0 mb-3;
       }
 
       .hero-text-scroll {
@@ -158,22 +158,22 @@ body::-webkit-scrollbar {
   }
 
   .nutrition-section {
-    @apply h-dvh overflow-hidden relative;
+    @apply md:h-[160vh] h-dvh overflow-hidden relative;
 
     .big-img {
-      @apply w-full absolute 2xl:h-full md:h-2/3 h-1/2 left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
+      @apply w-full absolute 2xl:h-2/3 md:h-3/4 h-1/2 left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
     }
 
     .nutrition-title {
-      @apply 2xl:max-w-4xl xl:max-w-2xl py-2 md:py-0 md:pb-5 pb-0 lg:pb-0 md:text-center text-[#513022] md:leading-[6.5vw] leading-[11vw];
+      @apply 2xl:max-w-4xl xl:max-w-2xl py-2 md:py-0 md:pb-5 md:mt-20 pb-0 lg:pb-0 md:text-center text-[#513022] md:leading-[9vw] leading-[11vw];
     }
 
     .nutrition-text-scroll {
-      @apply rotate-[-3deg] border-[.5vw] border-[#e3d3bc] text-nowrap opacity-0 md:-mt-28 -mt-24;
+      @apply rotate-[-3deg] border-[.5vw] border-[#e3d3bc] text-nowrap opacity-0 md:-mt-32 -mt-24;
     }
 
     .nutrition-box {
-      @apply absolute md:bottom-10 bottom-5 w-full md:px-0 px-5;
+      @apply absolute md:bottom-24 bottom-6 w-full md:px-0 px-5;
 
       .list-wrapper {
         @apply bg-[#fdebd2] rounded-full border-[.5vw] border-[#e8ddca] mx-auto max-w-6xl md:py-5 py-3 md:px-0 px-5 flex justify-between items-center;
@@ -184,7 +184,7 @@ body::-webkit-scrollbar {
       }
 
       .spacer-border {
-        @apply absolute right-0 top-1/2 transform -translate-y-1/2 md:h-24 h-16 w-px bg-[#C89C6E];
+        @apply absolute right-0 top-1/2 transform -translate-y-1/2 md:h-20 h-16 w-px bg-[#C89C6E];
       }
     }
   }
@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
     }
 
     .vd-pin-section {
-      @apply md:h-[110vh] h-dvh overflow-hidden md:!-translate-y-[15%] md:mt-0 mt-20;
+      @apply h-dvh overflow-hidden md:!-translate-y-[15%] md:mt-0 mt-20;
 
       video {
         @apply size-full absolute inset-0 object-cover;
