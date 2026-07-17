@@ -34,11 +34,16 @@ const HeroSection = () => {
       },
       "<+0.5s",
     );
-    tl.to(".hero-text", {
-      onStart: isTablet,
-      opacity: 1,
-      ease: "power3.inOut",
-    });
+    tl.to(
+      ".hero-text",
+      {
+        onStart: isTablet,
+        opacity: 1,
+        ease: "power1.inOut",
+        duration: 0.3,
+      },
+      "<+0.3s",
+    );
 
     const heroTl = gsap.timeline({
       scrollTrigger: {
