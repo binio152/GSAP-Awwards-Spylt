@@ -35,7 +35,7 @@ const FlavorSlider = () => {
           })
           .from(
             names,
-            { opacity: 0, ease: "power1.inOut", duration: 0.2 },
+            { opacity: 0, ease: "power1.inOut", duration: 0.3 },
             "<",
           );
       });

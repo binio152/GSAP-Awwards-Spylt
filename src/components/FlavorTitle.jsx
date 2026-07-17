@@ -55,7 +55,11 @@ const FlavorTitle = () => {
       ">-0.3s",
     );
 
-    tl.from(".flavors", { opacity: 0 }, "+=0.3s");
+    tl.from(
+      ".flavors",
+      { opacity: 0, duration: 0.2, ease: "power1.inOut" },
+      isMobile ? ">-0.2s" : "+=0.2s",
+    );
   });
 
   return (

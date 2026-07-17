@@ -7,6 +7,8 @@ import MessageSection from "./components/MessageSection";
 import FlavorSection from "./components/FlavorSection";
 import NutritionSection from "./components/NutritionSection";
 import BenefitSection from "./components/BenefitSection";
+import TestimonialSection from "./components/TestimonialSection";
+import FooterSection from "./components/Footer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 gsap.registerPlugin(TextPlugin);
@@ -14,7 +16,7 @@ gsap.registerPlugin(TextPlugin);
 const App = () => {
   useGSAP(() => {
     ScrollSmoother.create({
-      smooth: 1.3,
+      smooth: 3,
       effects: true,
     });
   });
@@ -26,11 +28,13 @@ const App = () => {
         <div id="smooth-content">
           <HeroSection />
           <MessageSection />
-          {/* <FlavorSection /> */}
+          <FlavorSection />
           <NutritionSection />
-          <BenefitSection />
-
-          <div className="h-[200dvh]"></div>
+          <div>
+            <BenefitSection />
+            <TestimonialSection />
+          </div>
+          <FooterSection />
         </div>
       </div>
     </main>

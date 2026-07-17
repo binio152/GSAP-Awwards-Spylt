@@ -233,15 +233,15 @@ body::-webkit-scrollbar {
     @apply bg-milk relative w-full h-[120dvh];
 
     .pin-box {
-      @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 bottom-[50vh];
+      @apply flex flex-col md:flex-row items-center justify-center w-full ps-52 absolute 2xl:bottom-32 bottom-[50vh];
 
       .vd-card {
-        @apply md:w-96 w-80 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden 2xl:relative absolute border-[.5vw] border-milk;
+        @apply md:w-96 w-65 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden md:relative absolute border-[.5vw] border-milk;
       }
     }
 
     h1 {
-      @apply uppercase md:text-[15vw] text-[18vw] leading-[105%] tracking-[-.4vw] ml-[2vw] font-bold;
+      @apply uppercase md:text-[13vw] text-[18vw] leading-[105%] tracking-[-.4vw] ml-[2vw] font-bold;
     }
   }
 
@@ -249,11 +249,11 @@ body::-webkit-scrollbar {
     @apply 2xl:min-h-dvh h-fit overflow-hidden relative bg-[#222123];
 
     .social-btn {
-      @apply border border-[#faeade33] md:size-[5vw] size-14 md:p-0 p-3 flex justify-center items-center rounded-full hover:bg-[#ffffff1a] transition-colors cursor-pointer;
+      @apply border border-[#faeade33] md:size-[4.5vw] size-14 md:p-0 p-3 flex justify-center items-center rounded-full hover:bg-[#ffffff1a] transition-colors cursor-pointer;
     }
 
     input {
-      @apply 2xl:text-4xl text-3xl placeholder:font-bold placeholder:tracking-tighter;
+      @apply 2xl:text-3xl text-2xl placeholder:font-bold placeholder:tracking-tighter;
     }
 
     .copyright-box {

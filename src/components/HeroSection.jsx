@@ -32,7 +32,7 @@ const HeroSection = () => {
         stagger: 0.05,
         ease: "power1.inOut",
       },
-      "<+0.5s",
+      "<+0.6s",
     );
     tl.to(
       ".hero-text",
@@ -42,7 +42,7 @@ const HeroSection = () => {
         ease: "power1.inOut",
         duration: 0.3,
       },
-      "<+0.3s",
+      "<+0.4s",
     );
 
     const heroTl = gsap.timeline({
