@@ -37,7 +37,7 @@ const TestimonialSection = () => {
         },
         delay: 0.5,
       })
-      .to(".vd-card", { yPercent: 50, stagger: 0.3, ease: "power1.inOut" });
+      .to(".vd-card", { yPercent: 12, stagger: 0.3, ease: "power1.inOut" });
   });
 
   const handlePlay = (index) => {
