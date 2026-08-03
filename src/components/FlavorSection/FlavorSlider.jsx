@@ -63,7 +63,7 @@ const FlavorSlider = () => {
         {flavorlists.map((flavor) => (
           <div
             key={flavor.name}
-            className={`flavor-card relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${flavor.rotation}`}
+            className={`flavor-card relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none md:rotate-[-8deg] rotate-0`}
           >
             <img
               src={`/images/${flavor.color}-bg.svg`}

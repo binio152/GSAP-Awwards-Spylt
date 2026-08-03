@@ -37,7 +37,7 @@ const TestimonialSection = () => {
         },
         delay: 0.5,
       })
-      .to(".vd-card", { yPercent: 12, stagger: 0.3, ease: "power1.inOut" });
+      .to(".vd-card", { yPercent: 36, stagger: 0.3, ease: "power1.inOut" });
   });
 
   const handlePlay = (index) => {
@@ -64,7 +64,7 @@ const TestimonialSection = () => {
         {cards.map((card, index) => (
           <div
             key={index}
-            className={`vd-card md:scale-56 xl:scale-60 2xl:scale-68 ${card.translation} ${card.rotation}`}
+            className={`vd-card md:scale-50 xl:scale-52 2xl:scale-56 ${card.translation} ${card.rotation}`}
             onMouseEnter={() => handlePlay(index)}
             onMouseLeave={() => handlePause(index)}
           >
