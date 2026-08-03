@@ -1,16 +1,44 @@
-# React + Vite
+# Spylt Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, animated product landing page built with React, GSAP, and Tailwind CSS. This project focuses on interactive scroll animations and inspired by the SPYLT website featured on Awwwards
 
-Currently, two official plugins are available:
+## Live Demo
+https://gsap-awwards-spylt.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Scroll-driven animations using GSAP ScrollTrigger.
+- Smooth scrolling experience with GSAP ScrollSmoother.
+- Responsive, mobile-first design using Tailwind CSS.
+- Component-driven React architecture.
 
-## React Compiler
+## Tech Stack
+- React 19 + Vite
+- Tailwind CSS v4
+- GSAP (ScrollTrigger, ScrollSmoother, TextPlugin)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation & Setup
 
-## Expanding the ESLint configuration
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/binio152/GSAP-Awwards-Spylt.git
+   
+   cd GSAP-Awwards-Spylt
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## License
+MIT License

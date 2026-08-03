@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
-import { useResponsive } from "../libs/useResponsive";
+import { useResponsive } from "@/libs/useResponsive";
 
 const HeroSection = () => {
   const { isMobile, isTablet } = useResponsive();

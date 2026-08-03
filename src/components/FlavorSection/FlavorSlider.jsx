@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import { flavorlists } from "../constants/flavorLists";
+import { flavorlists } from "@/constants/flavorLists";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useResponsive } from "../libs/useResponsive";
+import { useResponsive } from "@/libs/useResponsive";
 
 const FlavorSlider = () => {
   const { isMobile } = useResponsive();

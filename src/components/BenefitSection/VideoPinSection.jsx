@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import { useResponsive } from "../libs/useResponsive";
+import { useResponsive } from "@/libs/useResponsive";
 import gsap from "gsap";
 
 const VideoPinSection = () => {

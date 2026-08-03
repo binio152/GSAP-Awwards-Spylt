@@ -1,4 +1,4 @@
-import { useResponsive } from "../libs/useResponsive";
+import { useResponsive } from "@/libs/useResponsive";
 
 const FooterSection = () => {
   const { isMobile } = useResponsive();
